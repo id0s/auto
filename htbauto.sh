@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tc qdisc add dev enp0s3 root handle 1: htb default 10
 tc class add dev enp0s3 parent 1: classid 1:1 htb rate 1mbit ceil 1mbit
 tc class add dev enp0s3 parent 1: classid 1:2 htb rate 500kbit ceil 1mbit
